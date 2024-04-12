@@ -1,0 +1,18 @@
+const express = require('express')
+const router = express.Router();
+const userController = require("../controller/userController.js")
+const testController = require('../controller/testController.js')
+const profileController = require('../controller/profileController.js')
+const questionController = require('../controller/questionController.js')
+router.post("/createTest",testController.createTest)
+//router.get("/viewTest",testController.viewTest)
+router.put("/updateTest",testController.updateTest)
+router.delete("/deleteTest",testController.deleteTest)
+router.post("/createProfile",profileController.createProfile)
+router.get("/viewProfile/:userID",profileController.viewProfile)
+router.put("/updateProfile",profileController.updateProfile)
+router.delete("/deleteProfile",profileController.deleteProfile)
+router.post("/createQuestion",questionController.createQuestion)
+router.get("/viewQuestionByID/:id")
+router.get("/viewQuestionBytestId",questionController.viewQuestionBytestId)
+module.exports=router;

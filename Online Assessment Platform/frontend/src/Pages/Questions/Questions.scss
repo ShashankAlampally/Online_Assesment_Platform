@@ -1,0 +1,17 @@
+.questions{
+    width: 100%;
+    display: flex;
+    .container{
+        flex: 6;
+    }
+    .question{
+        width: 100%;
+        .bold{
+            font-weight: bold;
+
+            .light{
+                font-weight: lighter;
+            }
+        }
+    }
+}
